@@ -6,6 +6,7 @@ header
     width: 100%
     padding: 3.0rem
     position: fixed
+    z-index: 1
     left: 0
     top: 0
     background-color: white
@@ -111,28 +112,26 @@ header
 
 .experience 
     width: 100% 
-    height: 600px
+    height: 630px
+    font-family: Arial, Helvetica, sans-serif
     
     h2
-        padding-top: 50px
+        padding-top: 30px
         text-align: center
         font-size: 4.5rem
-    
-   
 
 .timeline 
     position: relative
     max-width: 1380px
     margin: 0 auto
-    padding-top: 120px
-    font-family: Arial, Helvetica, sans-serif
+    padding-top: 50px
 
     &::before
         content: ''
         position: absolute
         left: 50%
         width: 2px
-        height: 108%
+        height: 77%
         background: #c5c5c5    
 
     li
@@ -159,7 +158,6 @@ header
         &:nth-child(even)
             float: right
             text-align: left
-            clear: both        
             &::before
                 content: ''
                 position: absolute
@@ -178,36 +176,19 @@ header
 
         .time 
             margin-top: 20px
-                   
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // projects
 
 .projects
     width: 100% 
-    h2 
+
+    .link a
+        display: block
+        padding-top: 7.0rem
         text-align: center
-        font-size: 4.5rem
+        font-size: 1.9rem
+        text-transform: uppercase
 
 .container-projects
     max-width: 1380px
@@ -216,3 +197,39 @@ header
         font-family: Arial, Helvetica, sans-serif
     span
         color: #2375d5
+    
+    .container-cards
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 5rem
+        margin-top: 10.0rem    
+
+.cards 
+    padding: 20px
+    
+    box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.1)
+    border: 2px solid white
+
+    &:hover
+        border: 2px solid #2375d5
+        transition: 1s all ease-out
+    h3 
+        font-size: 2.2rem
+    p 
+        margin-top: 10px
+        text-align: justify
+    a 
+        display: block
+        margin-top: 15px
+
+// Skills
+
+.skill
+     width: 100% 
+     border: 1px solid red
+
+.container-skills
+    max-width: 1380px
+    border: 1px solid blue
+    margin: 0 auto
