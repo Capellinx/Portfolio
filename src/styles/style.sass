@@ -1,0 +1,218 @@
+@import "./partials/_global"
+
+/* header */
+
+header 
+    width: 100%
+    padding: 3.0rem
+    position: fixed
+    left: 0
+    top: 0
+    background-color: white
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)  
+
+.header_links
+    max-width: 1380px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.header_links ul
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 3.0rem
+    
+    li 
+        font-size: 1.8rem
+        font-family: 'Inter', sans-serif
+        
+        a
+            color: #666a72
+
+            &:hover
+                color: #121212
+                font-weight: 500
+                transition: all 0.5s ease-in-out
+                
+/* Section Inicio */
+
+.begin 
+    max-width: 1380px
+    margin: 15.0rem auto
+    display: flex
+    height: 70vh
+    gap: 60px
+    color: #121212
+    font-family: Arial, Helvetica, sans-serif
+
+    nav, .info-me, img  
+        margin-top: 17.0rem
+    
+    nav ul 
+        display: flex
+        align-items: center
+        justify-content: end
+        flex-direction: column
+        height: 29.0rem
+        gap: 2.8rem
+    
+    h1 
+        font-size: 6.2rem
+    
+    p
+        font-size: 2.4rem
+        color: #4d4e4e
+        margin-top: 2.5rem
+    
+    span 
+        display: block
+        width: 60.0rem
+        text-align: justify
+        margin-top: 2.5rem
+        font-size: 1.8rem
+        color: #6c6d6d
+        line-height: 3.2rem
+    
+    button
+        width: 20.0rem
+        padding: 1.0rem
+        margin-top: 2.5rem
+        border-radius: 1.0rem
+        font-size: 1.8rem
+        cursor: pointer
+
+    .download
+        background-color: #2375d5    
+        border: none
+        color: white
+        &:hover
+            background-color: #1d60ad 
+            transition: all 0.3s ease-in-out   
+
+    
+    .contact
+        border: 2px solid #2375d5
+        background: none
+        margin-left: 2.5rem
+        &:hover 
+            background-color: #1d60ad 
+            border: 2px solid #1d60ad
+            color: white
+            transition: all 0.3s ease-in-out
+    img 
+        width: 300px
+        margin-left: 13.0rem
+        border-radius: 50%
+        border: 10px solid #2375d5
+
+// Experience
+
+.experience 
+    width: 100% 
+    height: 600px
+    
+    h2
+        padding-top: 50px
+        text-align: center
+        font-size: 4.5rem
+    
+   
+
+.timeline 
+    position: relative
+    max-width: 1380px
+    margin: 0 auto
+    padding-top: 120px
+    font-family: Arial, Helvetica, sans-serif
+
+    &::before
+        content: ''
+        position: absolute
+        left: 50%
+        width: 2px
+        height: 108%
+        background: #c5c5c5    
+
+    li
+        padding: 40px 0
+        position: relative
+        width: 50%
+        padding: 20px 40px
+
+        &:nth-child(odd)
+            text-align: right
+            clear: both
+
+            &::before
+                content: ''
+                position: absolute
+                top: 24px
+                right: -6px
+                width: 10px
+                height: 10px
+                background-color: rgba(35,117,213, 1)
+                border-radius: 50%
+                box-shadow: 0 0 0 3px rgba(35,117,213, 0.2)
+
+        &:nth-child(even)
+            float: right
+            text-align: left
+            clear: both        
+            &::before
+                content: ''
+                position: absolute
+                top: 24px
+                left: -4px
+                width: 10px
+                height: 10px
+                background-color: rgba(35,117,213, 1)
+                border-radius: 50%
+                box-shadow: 0 0 0 3px rgba(35,117,213, 0.2)
+        h3 
+            font-weight: 600    
+            color:  rgba(35,117,213, 1)
+        p
+            margin: 10px 0 0
+
+        .time 
+            margin-top: 20px
+                   
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// projects
+
+.projects
+    width: 100% 
+    h2 
+        text-align: center
+        font-size: 4.5rem
+
+.container-projects
+    max-width: 1380px
+    margin: 14.0rem auto
+    h2
+        font-family: Arial, Helvetica, sans-serif
+    span
+        color: #2375d5
