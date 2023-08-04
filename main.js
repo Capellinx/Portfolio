@@ -7,13 +7,6 @@ sr.reveal('.experience', {
     }, 
 )
 
-sr.reveal('.begin', { 
-    origin: 'top', 
-    distance: "250px", 
-    duration: 2500, 
-    viewFactor: 0.5 
-    }, 
-)
 sr.reveal('.projects', { 
     distance: "250px", 
     duration: 2500, 
