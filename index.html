@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal" defer></script>
     <title>Lucas Capella</title>
 </head>
 <body>
-    <header>
+    <header >
         <nav class="header_links">
             <img src="/src/assets/_.svg" alt="">
             <ul>
-                <li><a href="#">Ínicio</a></li>
+                <li><a href="#header">Ínicio</a></li>
                 <li><a href="#experience">Experiência</a></li>
                 <li><a href="#projects">Projetos</a></li>
-                <li><a href="#Skills">Habilidades</a></li>
                 <li><a href="#service">Serviços</a></li>
+                <li><a href="#skills">Habilidades</a></li>
             </ul>
         </nav>
     </header>
     
-    <section class="begin">
+    <section id="header"  class="begin">
         <nav>
             <ul>
                 <li>
@@ -67,8 +72,7 @@
         </figure>
     </section>
 
-    <section class="experience" >
-        <a name="experience"></a>
+    <section id="experience" class="experience" >
         <h2>Experiência <span>.</span></h2>
         <div class="timeline">
             <ul>
@@ -109,8 +113,7 @@
             </ul>
     </section>
 
-    <section class="projects">
-        <a name="projects"></a>
+    <section id="projects" class="projects">
         <div class="container-projects">
             <h2>Projetos <span>.</span></h2>
             <div class="container-cards">
@@ -147,8 +150,37 @@
             </div>
     </section>
 
-    <section class="skills">
-        <a name="Skills"></a>
+    
+    <section id="service" class="service">
+        <div class="container-services">
+            <h2>Serviços <span>.</span></h2>
+            <div class="container-cards">
+                <div class="cards-service">
+                        <img src="/src/assets/img/icons8-caneta-100.png" alt="">
+                        <h3>UI design</h3>
+                        <p>
+                            Desenvolvo interfaces intuitivas e agradeveis para o usuario final. Sempre pensando na melhor solução para o design
+                        </p>
+                </div>
+                <div class="cards-service">
+                        <img src="/src/assets/img/icons8-desenvolvedor-100.png" alt="">
+                        <h3>Desenvolvimento</h3>
+                        <p>
+                            Desenvolvo sites profissionais, blogs, portfólios, landing pages e e-commerce.
+                        </p>
+                </div>
+                <div class="cards-service">
+                        <img src="/src/assets/img/icons8-gerenciamento-de-projetos-100.png" alt="">
+                        <h3>Gestão de projetos</h3>
+                        <p>
+                            Gerencio projetos e lidero o trabalho de uma equipe para atingir todos os objetivos dentro das restrições dadas.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
         <h2>Habilidades <span>.</span></h2>
         <div class="container-skills">
             <div class="skills-content">
@@ -192,41 +224,15 @@
         </div>
     </section>
 
-    <section class="service">
-        <a name="service"></a>
-        <div class="container-services">
-            <h2>Serviços <span>.</span></h2>
-            <div class="container-cards">
-                <div class="cards-service">
-                        <img src="/src/assets/img/icons8-caneta-100.png" alt="">
-                        <h3>UI design</h3>
-                        <p>
-                            Desenvolvo interfaces intuitivas e agradeveis para o usuario final. Sempre pensando na melhor solução para o design
-                        </p>
-                </div>
-                <div class="cards-service">
-                        <img src="/src/assets/img/icons8-desenvolvedor-100.png" alt="">
-                        <h3>Desenvolvimento</h3>
-                        <p>
-                            Desenvolvo sites profissionais, blogs, portfólios, landing pages e e-commerce.
-                        </p>
-                </div>
-                <div class="cards-service">
-                        <img src="/src/assets/img/icons8-gerenciamento-de-projetos-100.png" alt="">
-                        <h3>Gestão de projetos</h3>
-                        <p>
-                            Gerencio projetos e lidero o trabalho de uma equipe para atingir todos os objetivos dentro das restrições dadas.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <p>© Lucas Capella | 2023</p>
-        <a href="#">
+        <a href="#header">
             <img src="/src/assets/img/icons8-dedo-indicador-e-o-polegar-100.png" alt="">
         </a>
     </footer>
+    
+    <script type="module" src="/main.js"></script>
+    
 </body>
 </html>

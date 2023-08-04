@@ -8,9 +8,14 @@
   font-size: 62.5%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -31,6 +36,111 @@ h2 {
   font-size: 4.5rem;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2375d5;
+}
+
+@media (min-width: 1024px) {
+  .begin {
+    gap: 60px;
+    margin: 15rem auto;
+  }
+  .begin nav, .begin .info-me {
+    margin-top: 15rem;
+  }
+  .begin nav ul {
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+  .begin h1 {
+    font-size: 5rem;
+  }
+  .begin p {
+    font-size: 2.4rem;
+  }
+  .begin span {
+    display: block;
+    text-align: justify;
+  }
+  .begin img {
+    width: 300px;
+    margin: 15rem 0 0 13rem;
+  }
+}
+.timeline {
+  max-width: 1380px;
+  margin: 2rem auto;
+}
+
+.container-cards {
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.skills-content {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  width: 850px;
+}
+
+.skills-content {
+  width: 850px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .begin {
+    gap: 0px;
+    flex-direction: column-reverse;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .begin nav, .begin .info-me, .begin img {
+    margin-top: 0rem;
+  }
+  .begin nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+  }
+  .begin h1 {
+    font-size: 4rem;
+    padding-top: 2rem;
+  }
+  .begin p {
+    font-size: 2rem;
+  }
+  .begin span {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .begin img {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .timeline {
+    max-width: 100px;
+  }
+  .container-cards {
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    gap: 0rem;
+  }
+  .skills-content {
+    width: 450px;
+    flex-wrap: wrap;
+  }
+}
 /* header */
 header {
   width: 100%;
@@ -62,6 +172,7 @@ header {
   font-family: "Inter", sans-serif;
 }
 .header_links ul li a {
+  display: block;
   color: #666a72;
 }
 .header_links ul li a:hover {
@@ -75,34 +186,21 @@ header {
   max-width: 1380px;
   margin: 15rem auto;
   display: flex;
-  height: 70vh;
-  gap: 60px;
   color: #121212;
   font-family: Arial, Helvetica, sans-serif;
 }
-.begin nav, .begin .info-me, .begin img {
-  margin-top: 17rem;
-}
 .begin nav ul {
   display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-direction: column;
   height: 29rem;
   gap: 2.8rem;
 }
-.begin h1 {
-  font-size: 6.2rem;
-}
 .begin p {
-  font-size: 2.4rem;
   color: #4d4e4e;
   margin-top: 2.5rem;
 }
 .begin span {
   display: block;
   width: 60rem;
-  text-align: justify;
   margin-top: 2.5rem;
   font-size: 1.8rem;
   color: #6c6d6d;
@@ -137,19 +235,14 @@ header {
   transition: all 0.3s ease-in-out;
 }
 .begin img {
-  width: 300px;
-  margin-left: 13rem;
   border-radius: 50%;
-  border: 10px solid #2375d5;
+  border: 6px solid #2375d5;
 }
 
 .experience {
-  width: 100%;
-  height: 630px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 2rem;
 }
 .experience h2 {
-  padding-top: 30px;
   text-align: center;
   font-size: 4.5rem;
 }
@@ -157,8 +250,6 @@ header {
 .timeline {
   position: relative;
   max-width: 1380px;
-  margin: 0 auto;
-  padding-top: 50px;
 }
 .timeline::before {
   content: "";
@@ -181,10 +272,10 @@ header {
 .timeline li:nth-child(odd)::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 2.4rem;
   right: -6px;
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   background-color: rgb(35, 117, 213);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(35, 117, 213, 0.2);
@@ -196,10 +287,10 @@ header {
 .timeline li:nth-child(even)::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 2.4rem;
   left: -4px;
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   background-color: rgb(35, 117, 213);
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(35, 117, 213, 0.2);
@@ -209,10 +300,10 @@ header {
   color: rgb(35, 117, 213);
 }
 .timeline li p {
-  margin: 10px 0 0;
+  margin: 1rem 0 0;
 }
 .timeline li .time {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .projects {
@@ -242,7 +333,7 @@ header {
 }
 
 .cards {
-  padding: 20px;
+  padding: 2rem;
   box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.1);
   border: 2px solid white;
 }
@@ -254,12 +345,12 @@ header {
   font-size: 2.2rem;
 }
 .cards p {
-  margin-top: 10px;
+  margin-top: 1rem;
   text-align: justify;
 }
 .cards a {
   display: block;
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 
 .skills {
@@ -269,21 +360,20 @@ header {
 
 .container-skills {
   max-width: 1380px;
-  margin: 0 auto;
+  margin: 120px auto;
 }
 
 .skills-content {
   padding-top: 50px;
-  width: 850px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 5rem;
 }
 .skills-content img {
-  width: 100px;
+  width: 10rem;
   filter: grayscale(1);
 }
 .skills-content img:hover {
@@ -292,24 +382,23 @@ header {
 }
 
 .service {
-  padding-bottom: 100px;
+  padding-bottom: 10rem;
 }
 .service h2 {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 .container-cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
 }
 
 .cards-service {
-  width: 300px;
-  height: 300px;
+  width: 30rem;
+  height: 30rem;
   padding: 3.2rem;
-  margin-top: 120px;
+  margin-top: 12rem;
   box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.1);
   border: 2px solid white;
 }
@@ -317,28 +406,29 @@ header {
   border: 2px solid #2375d5;
   transition: 1s all ease-out;
 }
-.cards-service h3, .cards-service p {
-  margin-top: 1rem;
-  text-align: justify;
+.cards-service h3 {
+  margin-top: 2.5rem;
 }
 .cards-service p {
-  line-height: 22px;
+  text-align: justify;
+  margin-top: 1rem;
+  line-height: 3rem;
 }
 .cards-service img {
-  width: 70px;
+  width: 7re;
 }
 
 footer {
   width: 100%;
   color: white;
   background-color: #202020;
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 3rem;
 }
 footer img {
-  width: 30px;
+  width: 3rem;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
