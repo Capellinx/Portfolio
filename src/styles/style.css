@@ -93,6 +93,9 @@ h2 {
   .cards-service {
     height: 35rem;
   }
+  .cards:nth-child(even) {
+    width: 600px;
+  }
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .begin {
@@ -126,6 +129,10 @@ h2 {
     width: 200px;
     margin: 0 auto;
   }
+  .experience {
+    margin-top: 0;
+    padding-top: 0;
+  }
   .timeline {
     max-width: 100px;
     margin-top: 40px;
@@ -142,6 +149,9 @@ h2 {
   }
   .cards-service {
     height: 35rem;
+  }
+  .cards:nth-child(even) {
+    width: 510px;
   }
 }
 @keyframes navLinkFade {
@@ -197,7 +207,7 @@ header nav ul.active {
 /* header */
 header {
   width: 100%;
-  padding: 2rem;
+  padding: 2.5rem;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -237,7 +247,7 @@ header {
 /* Section Inicio */
 .begin {
   max-width: 1380px;
-  margin: 15rem auto;
+  margin: 10rem auto;
   display: flex;
   justify-content: space-around;
   color: #121212;
@@ -245,8 +255,8 @@ header {
 }
 .begin nav ul {
   display: flex;
-  height: 29rem;
   gap: 2.8rem;
+  padding-top: 13.9rem;
 }
 .begin p {
   color: #4d4e4e;
@@ -294,7 +304,7 @@ header {
 }
 
 .experience {
-  padding-top: 2rem;
+  padding-top: 10rem;
 }
 .experience h2 {
   text-align: center;
@@ -304,6 +314,7 @@ header {
 .timeline {
   position: relative;
   max-width: 1380px;
+  padding-top: 5rem;
 }
 .timeline::before {
   content: "";
@@ -365,10 +376,23 @@ header {
 }
 .projects .link a {
   display: block;
-  padding-top: 7rem;
-  text-align: center;
-  font-size: 1.9rem;
-  text-transform: uppercase;
+  width: 20rem;
+  margin: 5.5rem auto;
+  color: #2375d5;
+  position: relative;
+}
+.projects .link a::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #1d60ad;
+  position: absolute;
+  bottom: -3px;
+  left: 1px;
+  transition: 0.5s ease-in-out;
+}
+.projects .link a:hover::before {
+  width: 80%;
 }
 
 .container-projects {
@@ -391,20 +415,33 @@ header {
   box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.1);
   border: 2px solid white;
 }
-.cards:hover {
-  border: 2px solid #2375d5;
-  transition: 1s all ease-out;
-}
 .cards h3 {
   font-size: 2.2rem;
 }
 .cards p {
   margin-top: 1rem;
+  line-height: 32px;
   text-align: justify;
 }
 .cards a {
   display: block;
+  width: 12.5rem;
   margin-top: 1.5rem;
+  color: #2375d5;
+  position: relative;
+}
+.cards a::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #1d60ad;
+  position: absolute;
+  bottom: -3px;
+  left: 1px;
+  transition: 0.5s ease-in-out;
+}
+.cards a:hover::before {
+  width: 100%;
 }
 
 .skills {
@@ -517,7 +554,7 @@ footer img {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 5rem;
+    padding-top: 4rem;
   }
   .begin h1 {
     font-size: 4rem;
@@ -525,14 +562,15 @@ footer img {
   }
   .begin p {
     font-size: 2rem;
+    padding-top: 2rem;
   }
   .begin span {
     text-align: justify;
-    margin: 15px auto;
+    margin: 3.5rem auto;
     width: 350px;
   }
   .begin img {
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
   }
   .begin .contact {
@@ -566,6 +604,10 @@ footer img {
   }
   .cards {
     font-size: 1.4rem;
+    width: 300px;
+    text-align: justify;
+  }
+  .cards:nth-child(even) {
     width: 300px;
   }
   .service img {
