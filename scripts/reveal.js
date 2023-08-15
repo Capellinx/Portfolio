@@ -43,7 +43,7 @@ sr.reveal('.timeline', {
 sr.reveal('.cards', { 
     distance: '250px', 
     duration: 2500, 
-    origin: 'right',
+    origin: 'bottom',
     reset: false,
     viewFactor: 0.5
     
